@@ -130,6 +130,7 @@
       }
   }
 
+
   // Main class
   public class Main {
       public static void main(String[] args) {
@@ -164,3 +165,34 @@
           }
       }
   }
+
+
+
+//ANALISA:
+
+// Abstract class Account: Menyediakan dasar untuk akun dengan properti dasar seperti nomor akun, pemilik akun, saldo, dan riwayat transaksi.
+Memiliki metode deposit, withdraw, transfer, dan abstract method displayInfo.
+
+//Class User extends Account:Merupakan turunan dari kelas Account yang mengimplementasikan metode displayInfo sesuai dengan kebutuhan akun pengguna.
+Digunakan untuk membuat objek akun pengguna dengan nomor akun, pemilik akun, saldo awal, dan riwayat transaksi.
+
+//Class Admin: Memiliki referensi ke Bank dan dapat melihat informasi semua akun di bank.
+Digunakan untuk membuat objek admin dengan referensi ke bank.
+
+//Class Bank: Menyimpan daftar akun dan menyediakan metode untuk menambah akun.
+Memiliki metode untuk mendapatkan daftar semua akun.
+
+//Class UserManager:Mengelola otentikasi pengguna dengan menggunakan HashMap untuk menyimpan kredensial pengguna (username dan password).
+Memiliki metode authenticate yang meminta pengguna untuk memasukkan username dan password.
+
+//Main class:Menjalankan aplikasi utama dengan membuat objek UserManager untuk otentikasi.
+Membuat objek Bank dan Admin.
+Membuat beberapa objek User, menambahkannya ke Bank, dan melakukan beberapa transaksi (deposit dan transfer).
+Jika pengguna yang masuk adalah admin, tampilkan informasi semua akun. Jika pengguna biasa, tampilkan informasi akun pengguna tersebut.
+
+//Poin Penting:Program menggunakan konsep OOP (Object-Oriented Programming) dengan pewarisan (inheritance) untuk memodelkan hierarki kelas.
+Bank menyimpan daftar akun, dan Admin dapat melihat informasi semua akun.
+UserManager mengelola otentikasi pengguna dengan menggunakan username dan password.
+Setiap transaksi (deposit, withdraw, transfer) dicatat dalam riwayat transaksi setiap akun.
+Pengguna dapat melakukan deposit, withdraw, dan transfer melalui objek User.
+Program memberikan tampilan informasi akun sesuai peran pengguna (admin atau pengguna biasa).
